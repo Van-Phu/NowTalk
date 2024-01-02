@@ -10,22 +10,44 @@ const App = () => {
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/messages')
+    // Fetch initial messages from the server when the component mounts
+    axios.get('http://localhost:5000/api/messages/getMessages')
       .then(response => setMessages(response.data))
       .catch(error => console.error(error));
+
+    // Listen for new messages from the socket and update state
     socket.on('chat message', newMessage => {
-      setMessages([...messages, newMessage]);
+      setMessages(prevMessages => [...prevMessages, newMessage]);
     });
+
+    // Cleanup: Unsubscribe from the socket when the component unmounts
     return () => {
       socket.off('chat message');
     };
-  }, [messages]);
+  }, []);
 
   const sendMessage = () => {
-    axios.post('http://localhost:5000/api/messages', { user, content })
+    // Check if user and content are not empty before sending a message
+    if (user.trim() === '' || content.trim() === '') {
+      return;
+    }
+
+    const newMessage = { user, content };
+
+    // Update state immediately for a responsive UI
+    setMessages(prevMessages => [...prevMessages, newMessage]);
+
+    // Send the message to the server
+    axios.post('http://localhost:5000/api/messages/postMessages', newMessage)
       .then(response => {
         if (response.data.success) {
-          socket.emit('chat message', { user, content });
+          // Update state with the server response
+          setMessages(prevMessages => [...prevMessages, newMessage]);
+
+          // Emit the message through the socket to update other clients
+          socket.emit('chat message', newMessage);
+          
+          // Clear the message input
           setContent('');
         }
       })
