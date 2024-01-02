@@ -11,43 +11,29 @@ const App = () => {
 
   useEffect(() => {
     // Fetch initial messages from the server when the component mounts
-    axios.get('http://localhost:5000/api/messages/getMessages')
+    axios.get('https://curly-pollen-steam.glitch.me/api/messages/getMessages')
       .then(response => setMessages(response.data))
       .catch(error => console.error(error));
-
-    // Listen for new messages from the socket and update state
     socket.on('chat message', newMessage => {
       setMessages(prevMessages => [...prevMessages, newMessage]);
     });
-
-    // Cleanup: Unsubscribe from the socket when the component unmounts
     return () => {
       socket.off('chat message');
     };
   }, []);
 
   const sendMessage = () => {
-    // Check if user and content are not empty before sending a message
     if (user.trim() === '' || content.trim() === '') {
       return;
     }
 
     const newMessage = { user, content };
-
-    // Update state immediately for a responsive UI
     setMessages(prevMessages => [...prevMessages, newMessage]);
-
-    // Send the message to the server
-    axios.post('http://localhost:5000/api/messages/postMessages', newMessage)
+    axios.post('https://curly-pollen-steam.glitch.me/api/messages/postMessages', newMessage)
       .then(response => {
         if (response.data.success) {
-          // Update state with the server response
           setMessages(prevMessages => [...prevMessages, newMessage]);
-
-          // Emit the message through the socket to update other clients
           socket.emit('chat message', newMessage);
-          
-          // Clear the message input
           setContent('');
         }
       })
