@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import '../css/login.css'
 import { Icon } from '@iconify/react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () =>{
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     const handleGetValueUsername = (event) => {
         const value = event.target.value;
@@ -29,7 +31,7 @@ const Login = () =>{
         })
         .then(response => {
           console.log("Đăng nhập thành công:", response.data);
-          alert('Đăng nhập thành công:!');
+          navigate('/home');
         })
         .catch(error => {
           console.error("Đăng nhập thất bại:", error);
@@ -38,7 +40,10 @@ const Login = () =>{
 
     return(
         <div className='safeArea'>
-            <div className='imageBackground'></div>
+            
+            <div className='imageBackground'>
+            </div>
+            
             <div className='formLogin'>
                 <h1 style={{color:'white', fontSize: 40}}>ĐĂNG NHẬP</h1>
 

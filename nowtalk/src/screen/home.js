@@ -49,17 +49,18 @@ const App = () => {
 
   return (
     <div>
-      <div>
-        <input type="text" placeholder="User" value={user} onChange={(e) => setUser(e.target.value)} />
-        <input type="text" placeholder="Message" value={content} onChange={(e) => setContent(e.target.value)} />
-        <button onClick={sendMessage}>Gửi</button>
-      </div>
-      <div>
+      <div style={{height: "90vh", width: '100%', background: "#501794"}}>
         {messages.map((message, index) => (
           <div key={index}>
             <strong>{message.user}:</strong> {message.content}
           </div>
         ))}
+      </div>
+
+      <div>
+        <input type="text" placeholder="User" value={user} onChange={(e) => setUser(e.target.value)} />
+        <input type="text" placeholder="Message" value={content} onChange={(e) => setContent(e.target.value)} />
+        <button onClick={sendMessage}>Gửi</button>
       </div>
     </div>
   );
