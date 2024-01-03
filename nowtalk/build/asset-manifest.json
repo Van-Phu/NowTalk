@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/NowTalk/static/css/main.8254a24f.css",
-    "main.js": "/NowTalk/static/js/main.5572eb8c.js",
+    "main.js": "/NowTalk/static/js/main.96392134.js",
     "static/js/787.94a1e38e.chunk.js": "/NowTalk/static/js/787.94a1e38e.chunk.js",
     "static/media/loginImage.png": "/NowTalk/static/media/loginImage.897554ffe3cd08f93df2.png",
     "index.html": "/NowTalk/index.html",
     "main.8254a24f.css.map": "/NowTalk/static/css/main.8254a24f.css.map",
-    "main.5572eb8c.js.map": "/NowTalk/static/js/main.5572eb8c.js.map",
+    "main.96392134.js.map": "/NowTalk/static/js/main.96392134.js.map",
     "787.94a1e38e.chunk.js.map": "/NowTalk/static/js/787.94a1e38e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8254a24f.css",
-    "static/js/main.5572eb8c.js"
+    "static/js/main.96392134.js"
   ]
 }
