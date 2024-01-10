@@ -1,10 +1,16 @@
 {
   "files": {
+<<<<<<< HEAD
     "main.css": "/NowTalk/static/css/main.3910eac8.css",
     "main.js": "/NowTalk/static/js/main.239757fe.js",
+=======
+    "main.css": "/NowTalk/static/css/main.8254a24f.css",
+    "main.js": "/NowTalk/static/js/main.96392134.js",
+>>>>>>> b85c96160e4198fc415ab3ebc1bbe574472803fc
     "static/js/787.94a1e38e.chunk.js": "/NowTalk/static/js/787.94a1e38e.chunk.js",
     "static/media/backroundLogin.png": "/NowTalk/static/media/backroundLogin.f5e76a35b9e696b65fd4.png",
     "index.html": "/NowTalk/index.html",
+<<<<<<< HEAD
     "main.3910eac8.css.map": "/NowTalk/static/css/main.3910eac8.css.map",
     "main.239757fe.js.map": "/NowTalk/static/js/main.239757fe.js.map",
     "787.94a1e38e.chunk.js.map": "/NowTalk/static/js/787.94a1e38e.chunk.js.map"
@@ -12,5 +18,14 @@
   "entrypoints": [
     "static/css/main.3910eac8.css",
     "static/js/main.239757fe.js"
+=======
+    "main.8254a24f.css.map": "/NowTalk/static/css/main.8254a24f.css.map",
+    "main.96392134.js.map": "/NowTalk/static/js/main.96392134.js.map",
+    "787.94a1e38e.chunk.js.map": "/NowTalk/static/js/787.94a1e38e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8254a24f.css",
+    "static/js/main.96392134.js"
+>>>>>>> b85c96160e4198fc415ab3ebc1bbe574472803fc
   ]
 }
