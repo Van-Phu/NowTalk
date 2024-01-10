@@ -1,25 +1,28 @@
 .safeArea{
     height: 100vh;
     width: 100%;
-    background-color: #240B48;
+    background-color: #160430;
+    display: flex;
 }
 
 .imageBackground{
-    height: 571px;
-    width: 100%;
-    background-image: url('../image/loginImage.png');
+    height: 100vh;
+    width: 50%;
+    background-image: url('../image/backroundLogin.png');
+    background-size: cover;
 }
 
 .formLogin{
     height: 500px;
-    margin: 20px;
-    margin-top: -280px;
+    margin-top: 10%;
+    width: 30%;
+    margin-left: 10%;
 }
 
 .inputType{
     height: 55px;
     display: flex;
-    background-color: #190733;
+    background-color: #261046;
     color: #A4A4A4;
     border-radius: 10px;
     align-items: center;
@@ -27,6 +30,8 @@
 
 .textInput{
     color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 .input{
@@ -35,11 +40,12 @@
 
 .btnLogin{
     width: 100%;
-    height: 50px;
-    margin-top: 20px;
+    height: 70px;
+    margin-top: 50px;
     border-radius: 10px;
     border-width: 0;
     background: linear-gradient(to right, #501794, #4176AB);
     color: white;
     font-size: 20px;
-}
+
+} 
