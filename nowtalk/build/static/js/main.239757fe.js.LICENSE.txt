@@ -56,7 +56,6 @@
  */
 
 /**
-<<<<<<<< HEAD:nowtalk/build/static/js/main.239757fe.js.LICENSE.txt
  * React Router DOM v6.21.1
  *
  * Copyright (c) Remix Software Inc.
@@ -68,8 +67,6 @@
  */
 
 /**
-========
->>>>>>>> b85c96160e4198fc415ab3ebc1bbe574472803fc:nowtalk/build/static/js/main.96392134.js.LICENSE.txt
  * React Router v6.21.1
  *
  * Copyright (c) Remix Software Inc.
