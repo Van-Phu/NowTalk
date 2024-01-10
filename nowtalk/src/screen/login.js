@@ -21,7 +21,6 @@ const Login = ({ onLogin }) =>{
     };
 
     const handleLogin = () => {
-<<<<<<< HEAD
       if (!username.trim() || !password.trim()) {
         alert("Vui lòng nhập tên đăng nhập và mật khẩu.");
         return;
@@ -41,31 +40,8 @@ const Login = ({ onLogin }) =>{
       });
     };
     
-
     return(
         <div className='safeArea'>
-=======
-        if (!username.trim() || !password.trim()) {
-          alert("Vui lòng nhập tên đăng nhập và mật khẩu.");
-          return;
-        }
-        axios.post('https://curly-pollen-steam.glitch.me/api/users/login', {
-          username: username,
-          password: password,
-        })
-        .then(response => {
-          console.log("Đăng nhập thành công:", response.data);
-          navigate('/home');
-        })
-        .catch(error => {
-          console.error("Đăng nhập thất bại:", error);
-        });
-      };
-
-    return(
-        <div className='safeArea'>
-            
->>>>>>> b85c96160e4198fc415ab3ebc1bbe574472803fc
             <div className='imageBackground'>
             </div>
             

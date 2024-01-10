@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState, useEffect } from 'react';
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import { Routes, Route, Link } from 'react-router-dom';
@@ -73,22 +73,6 @@ const App = () => {
         <Login onLogin={handleLogin} />
       )}
     </div>
-=======
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './screen/login';
-import Home from './screen/home';
-
-const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        {/* Tuyến đường mặc định */}
-        <Route path="*" element={<Login />} />
-      </Routes>
-    </Router>
->>>>>>> b85c96160e4198fc415ab3ebc1bbe574472803fc
   );
 };
 
