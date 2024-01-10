@@ -14,8 +14,7 @@ const About = ({ loggedInUsername }) => {
 			}}
 		>
 			<h1>
-				GeeksforGeeks is a Computer Science portal
-				for geeks.
+				sản phẩm của team ZeroGravityZoners. Beta 0.0.1
 			</h1>
 		</div>
 	);
